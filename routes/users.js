@@ -18,7 +18,6 @@ router.post('/landing-pages/create', function(req, res, next) {
    var slug = req.body.slug;
    var markup = req.body.markup;
    pages.push({markup: markup, slug: slug});
-   console.log(pages);
    res.render('new.ejs');
 });
 
@@ -38,7 +37,6 @@ router.get('/landing-pages/get', function(req, res, next) {
     var found = false;
     var slug = req.query.slug;
     var content;
-    console.log('Searching for...' + slug);
     pages.forEach(function(page) {
         if (page.slug === slug) {
             found = true;
@@ -59,7 +57,6 @@ router.get('/landing-pages/edit', function(req, res, next) {
     var found = false;
     var slug = req.query.slug;
     var content, slug;
-    console.log('In /edit, Searching for...' + slug);
     pages.forEach(function(page) {
         if (page.slug === slug) {
             found = true;
@@ -79,7 +76,6 @@ router.get('/landing-pages/:slug', function(req, res, next) {
     var found = false;
     var slug = req.params.slug;
     var content;
-    console.log('Direct Searching for...' + slug);
     pages.forEach(function(page) {
         if (page.slug === slug) {
             found = true;
@@ -112,7 +108,6 @@ router.post('/landing-pages/update', function(req, res, next) {
             //pages.push({markup: markup, slug: slug});
         }
     });
-    console.log(pages);
     res.render('updated.ejs');
 });
 
