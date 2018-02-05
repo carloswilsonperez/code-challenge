@@ -1,5 +1,5 @@
 
-# Code Challenge February 2018
+# Code Challenge February 2018 - Carlos A. Wilson
 
 This repo contins a **preliminary** solution to the **Code Challenge** that can be found here:  https://www.notion.so/myrna/Backend-Coding-Challenge-c5375d4e6ff740649e7c4631f4af0683
 
@@ -9,3 +9,5 @@ This repo contins a **preliminary** solution to the **Code Challenge** that can 
 2. cd code-challenge
 3. npm install
 4. Then, go to http://localhost/3000
+
+carloswilsonperez@gmail.com
