@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+
+<body>
+  <div class="container">
+    <div class="form-group">
+    Write your page's Slug:
+    </div>
+    <form class="form-horizontal" method="GET" action="/api/v1/landing-pages/get">
+      <div class="form-group">
+        <label for="slug" class="col-sm-2 control-label">Slug</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Send</button>
+          <button type="cancel" class="btn btn-default" onclick="window.location='http://localhost:3000/';return false;">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+

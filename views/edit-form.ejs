@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <script type='text/javascript' src='/javascripts/client.js'></script>
-</head>
+<% include ../partials/header.ejs %>
 
 <body>
   <div class="container">
     <div class="form-group">
     Write your page's Slug:
     </div>
-    <form class="form-horizontal" method="GET" action="/api/v1/landing-pages/get">
+    <form class="form-horizontal" method="GET" action="/api/v1/landing-pages/edit">
       <div class="form-group">
         <label for="slug" class="col-sm-2 control-label">Slug</label>
         <div class="col-sm-10">

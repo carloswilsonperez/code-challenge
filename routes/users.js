@@ -10,7 +10,7 @@ router.get('/landing-pages', function(req, res, next) {
     pages.forEach(function(page) {
         slugs.push(page.slug);
     });
-    res.render('summary.html', {slugs: slugs});
+    res.render('summary', {slugs: slugs});
 });
 
 // POST Add a new landing page resource.
@@ -19,18 +19,18 @@ router.post('/landing-pages/create', function(req, res, next) {
    var markup = req.body.markup;
    pages.push({markup: markup, slug: slug});
    console.log(pages);
-   res.render('new.html');
+   res.render('new.ejs');
 });
 
 // GET Render a form to create a new landing page resource
 router.get('/landing-pages/new', function(req, res, next) {
-    res.render('form.html');
+    res.render('form');
 });
 
 // GET Render a form to look for an existing page
 router.get('/landing-pages/search', function(req, res, next) {
     var slug = req.params.slug;
-    res.render('search-form.html');
+    res.render('search-form.ejs');
 });
 
 // GET Renders a form to look for a saved page based on Slug
@@ -50,7 +50,7 @@ router.get('/landing-pages/get', function(req, res, next) {
         res.write(content);
         res.end();
     } else {
-        res.render('403.html');
+        res.render('403.ejs');
     }
 });
 
@@ -68,9 +68,9 @@ router.get('/landing-pages/edit', function(req, res, next) {
         }
     });
     if (found) {
-        res.render('edit-results.html', {results: content, slug: slug});
+        res.render('edit-results.ejs', {results: content, slug: slug});
     } else {
-        res.render('403.html');
+        res.render('403.ejs');
     }
 });
 
@@ -91,13 +91,13 @@ router.get('/landing-pages/:slug', function(req, res, next) {
         res.write(content);
         res.end();
     } else {
-        res.render('403.html');
+        res.render('403.ejs');
     }
 });
 
 // GET Renders a form to update the markup of a saved page
 router.get('/landing-pages/update/update', function(req, res, next) {
-    res.render('edit-form.html');
+    res.render('edit-form.ejs');
 });
 
 // POST Updates the markup of a saved pages
@@ -113,7 +113,7 @@ router.post('/landing-pages/update', function(req, res, next) {
         }
     });
     console.log(pages);
-    res.render('updated.html');
+    res.render('updated.ejs');
 });
 
 /* POST landing pages listening. */
