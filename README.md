@@ -8,6 +8,7 @@ This repo contins a **preliminary** solution to the **Code Challenge** that can 
 1. Clone the repo
 2. cd code-challenge
 3. npm install
-4. Then, go to http://localhost/3000
+4. npm start
+5. Then, go to http://localhost/3000
 
 carloswilsonperez@gmail.com
